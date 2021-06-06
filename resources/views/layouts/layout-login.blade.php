@@ -37,10 +37,7 @@
         @yield('header')
             <main class="mx-auto">
                 <div class="flex">
-                    {{-- column left --}}                    
-                    <div class="sidebar-left w-15">
-                        @include('_left-sidebar-links')
-                    </div>
+                   
               
                     {{-- column center --}}
                     <div class="flex-1 p-3">
@@ -48,12 +45,7 @@
                        @include('_footer')
                     </div>
             
-                    {{-- column right --}}                        
-                    <div class="pr-3 pt-4 w-15">
-                        <h3 class="font-bold text-xl mb-4 text-white">Info list</h3>
-                        @include('_right-info-list')
-                        @include('_right-info-list')
-                    </div>
+                   
                 </div>
             </main>     
     </div>

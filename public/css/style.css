@@ -21,7 +21,6 @@ body {
 
 .info-list {
     background-color: #243a61;
-    padding: 5%;
 }
 
 .info-list ul {
@@ -40,5 +39,18 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
 iframe {
     border-radius: 1rem;
     width: 100%;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.logo {
+    animation-duration: 2s;
+    transition: 1s;
+}
+
+.logo:hover {
+    transform: rotate(180deg); /* Equal to rotateZ(45deg) */
 }
 

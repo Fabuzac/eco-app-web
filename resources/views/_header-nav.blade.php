@@ -3,7 +3,7 @@
 
     <section class="px-2 ">
         <header class="container mx-auto background-wind">                
-            <a href="/"><img width="80" src="/images/logo.png" alt="Tweety logo" class="logo"></a>
+            <a href="/"><img width="80" src="/images/rose.png" alt="logo" class="logo"></a>
         </header>
     </section>
 
