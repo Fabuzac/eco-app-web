@@ -17,10 +17,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    
-
     {{-- <script src="http://unpkg.com/turbolinks"></script> --}}
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -30,8 +27,7 @@
     @yield('head')
 </head>
 <body>
-    <div id="app">
-        
+    <div id="app">        
         @include('_header-nav')
 
         @yield('header')
@@ -56,7 +52,6 @@
                     </div>
                 </div>
             </main>     
-    </div>
-    
+    </div>    
 </body>
 </html>

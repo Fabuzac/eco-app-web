@@ -2,11 +2,11 @@
     <nav class="sidebar-left text-light ">
         <ul class="left-menu">
             <li>
-                <a class="text-bold mb-3 block" href="{{ route('home') }}">Home</a>
+                <a class="text-bold mb-3 block" href="/">Home</a>
             </li>
         
             <li>
-                <a class="text-bold mb-3 block" href="/contact">Renewable Energy</a>
+                <a class="text-bold mb-3 block" href="/">Renewable Energy</a>
             </li>
         
             <li>
@@ -14,11 +14,11 @@
             </li>
         
             <li>
-                <a class="text-bold mb-3 block" href="/explore">Celestial Being</a>
+                <a class="text-bold mb-3 block" href="/celestial">Celestial Being</a>
             </li>
 
             <li>
-                <a class="text-bold mb-3 block" href="/explore">Innovators</a>
+                <a class="text-bold mb-3 block" href="/innovators">Innovators</a>
             </li>
             
             @auth

@@ -20,3 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// INNOVATORS
+Route::get('/innovators', [App\Http\Controllers\InnovatorsController::class, 'index']);
+// Route::get('/innovators', function () { return view('innovators'); });
+
+// CELESTIAL
+Route::get('/celestial', function () { return view('celestial'); });

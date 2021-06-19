@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<body style="background: rgb(41, 41, 41)" >    
-
+<body>
     <div class="container">
         <div class="justify-content-center text-center">
             <h1 class="text-light">Eco-Blog</h1>

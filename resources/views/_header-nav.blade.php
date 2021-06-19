@@ -1,12 +1,10 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
 
-
     <section class="px-2 ">
         <header class="container mx-auto background-wind">                
             <a href="/"><img width="80" src="/images/rose.png" alt="logo" class="logo"></a>
         </header>
     </section>
-
 
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">

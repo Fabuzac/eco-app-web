@@ -36,8 +36,7 @@
 
         @yield('header')
             <main class="mx-auto">
-                <div class="flex">
-                   
+                <div class="flex">                  
               
                     {{-- column center --}}
                     <div class="flex-1 p-3">
