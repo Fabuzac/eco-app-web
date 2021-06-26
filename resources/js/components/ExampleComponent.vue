@@ -6,7 +6,7 @@
                     <div class="card-header">Example Component</div>
 
                     <div class="card-body">
-                        I'm an example component. test
+                        I'm an example component. {{ text }}
                     </div>
                 </div>
             </div>
@@ -18,6 +18,12 @@
     export default {
         mounted() {
             console.log('Component mounted, taratata')
+        },
+        props: {
+            text: {
+                type: String,
+                default: 'data and test',
+            }
         }
     }
 </script>

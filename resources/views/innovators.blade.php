@@ -1,16 +1,30 @@
-@extends('layouts.app')
+<html style="background-color: #000">
+    <body>   
+        <style>
+            .input {
 
-@section('content')
-<body style="background: rgb(41, 41, 41)" >    
+                margin-top: 20%;
+                margin-left: 35%;
+            }
+            textarea{
+                font-size: 3em;
+                background: #000;
+                border: none;
+                color: rgb(20, 255, 0);
+                font-family: sans-serif;                
+            }
+        </style>
 
-    <div class="container">
-        <h1>
-            @php
-                $command = escapeshellcmd('python C:\laragon\www\eco-blog-v2\resources\python\index.py');
-                $output = shell_exec($command);
-                echo $output;
-            @endphp            
-        </h1>
-    </div>
-</body>
-@endsection
+        <form class="input" action="" method="POST">
+            @csrf
+            <textarea 
+            class="width-100 textarea border-none" 
+            name="body" 
+            placeholder="Who are you?"
+            required
+                
+        ></textarea>
+          
+        </form>
+    </body>
+</html>

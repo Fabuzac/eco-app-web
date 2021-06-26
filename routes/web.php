@@ -12,19 +12,24 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::middleware('auth')->group(function () {
+    Route::get('/welcome', [App\Http\Controllers\TestController::class, 'index'])->name('home');
+});
+
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // INNOVATORS
-Route::get('/innovators', [App\Http\Controllers\InnovatorsController::class, 'index']);
+Route::get('/test', [App\Http\Controllers\TestController::class, 'index']);
 // Route::get('/innovators', function () { return view('innovators'); });
 
 // CELESTIAL
 Route::get('/celestial', function () { return view('celestial'); });
+
+Route::get('/innovators', function () { return view('innovators'); });

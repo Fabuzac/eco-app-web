@@ -10,7 +10,7 @@
             </li>
         
             <li>
-                <a class="text-bold mb-3 block" href="/explore">Fossil Fuel</a>
+                <a class="text-bold mb-3 block" href="/innovators">Innovators Project</a>
             </li>
         
             <li>
@@ -18,14 +18,11 @@
             </li>
 
             <li>
-                <a class="text-bold mb-3 block" href="/innovators">Innovators</a>
+                <a class="text-bold mb-3 block" href="/test">Python view o.O</a>
             </li>
             
             @auth
-                <li>
-                    <a class="text-bold mb-3 block" href="{{ route( 'profile', auth()->user() ) }}">Profile</a>
-                </li>
-        
+                        
                 <li>
                     <a class="text-bold mb-3 block"
                         href="{{ route('logout') }}"
