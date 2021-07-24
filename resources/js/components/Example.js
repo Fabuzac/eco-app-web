@@ -14,7 +14,7 @@ function Example() {
                 </div>
             </div>
         </div>
-    );
+    ); 
 }
 
 export default Example;
