@@ -13,6 +13,11 @@ require('./bootstrap');
  */
 
 require('./components/Example');
+require('./components/ChartLine');
+require('./components/ChartBar');
+
+
+
 
 
 

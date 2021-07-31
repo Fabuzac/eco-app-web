@@ -7,9 +7,9 @@ function Example() {
             <div className="row justify-content-center">
                 <div className="col-md-8">
                     <div className="card">
-                        <div className="card-header">Example Component</div>
+                        <div className="card-header">Awesome Chart React component</div>
 
-                        <div className="card-body">I'm an example component!</div>
+                        <div className="card-body">Temperature comparison chart for the year 2019 in France</div>
                     </div>
                 </div>
             </div>

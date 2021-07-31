@@ -14,7 +14,7 @@
             </li>
             
             <li>
-                <a class="text-bold mb-3 block" href="/planet">Where my planet melting?</a>
+                <a class="text-bold mb-3 block" href="/planet">Chart</a>
             </li>
         
             <li>

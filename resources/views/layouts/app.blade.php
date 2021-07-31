@@ -17,7 +17,6 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-    <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     
     {{-- <script src="http://unpkg.com/turbolinks"></script> --}}
@@ -48,10 +47,10 @@
                     </div>
             
                     {{-- column right --}}                        
-                    <div class="pr-3 pt-4 w-15">
-                        <h3 class="font-bold text-xl mb-4 text-white">Info list</h3>
+                    <div class="pr-2 w-15">
+                        <h3 class="font-bold text-xl mt-3 mb-2 text-white text-center background-colored p-1 rounded">Info list</h3>
                         @include('_right-info-list')
-                        @include('_right-info-list')
+                        
                     </div>
                 </div>
             </main>     

@@ -20,13 +20,21 @@ body {
     padding: 3%;
 }
 
-.info-list {
+.info-list li {
     background-color: #243a61;
+}
+
+.background-colored {
+    background-color: #25558b;
 }
 
 .info-list ul {
     list-style: none;
-    padding: 8%;
+    padding: 0%;
+}
+
+.font-2 {
+    font-size: 2em;
 }
 
 h1, h2, h3, h4, h5, h6, p, li, ul {
@@ -61,6 +69,10 @@ iframe {
 
 .blanc {
     color: #ffffff;
+}
+
+.black {
+    color: #000000;
 }
 
 .map {
