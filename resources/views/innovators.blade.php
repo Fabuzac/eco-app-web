@@ -13,8 +13,16 @@
                 color: rgb(20, 255, 0);
                 font-family: sans-serif;                
             }
+
+            .invt {
+                position: absolute;
+                top:5%;
+                left: 40%;
+            }
+
         </style>
 
+        <img src="images/INVT.png" alt="" width="10%" class="invt">
         <form class="input" action="" method="POST">
             @csrf
             <textarea 

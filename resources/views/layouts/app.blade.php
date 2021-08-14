@@ -47,7 +47,7 @@
                     </div>
             
                     {{-- column right --}}                        
-                    <div class="pr-2 w-15">
+                    <div class="pr-3 w-15">
                         <h3 class="font-bold text-xl mt-3 mb-2 text-white text-center background-colored p-1 rounded">Info list</h3>
                         @include('_right-info-list')
                         

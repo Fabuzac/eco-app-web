@@ -3,15 +3,7 @@
 @section('content')
 <body>    
     <div class="container card p-4">
-        <div class="mr-4 width-10">
-            <a href="name">
-                <img 
-                    src="" 
-                    alt="Friend profile picture" 
-                    class="rounded-full p-1 width-90 shadow"
-                >
-            </a>
-        </div>
+        
     
         <div class="width-90">
             <a class="" href="user">
@@ -19,10 +11,6 @@
             </a>
             <p class="text-dark word-wrap">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, nobis nulla! Quam hic, possimus sunt consequuntur voluptates tempore. Libero quas aperiam quam hic nisi fugit nesciunt, quidem itaque officiis veniam?
-            </p>
-    
-            <p>
-               
             </p>
     
             @auth
