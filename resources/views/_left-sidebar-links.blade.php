@@ -2,36 +2,43 @@
     <nav class="sidebar-left text-light ">
         <ul class="left-menu">
             <li>
+                <i class="fas fa-home"></i>
                 <a class="text-bold mb-3 block" href="/">Home</a>
             </li>
         
             <li>
-                <a class="text-bold mb-3 block" href="/renewable-energy">Renewable Energy</a>
-            </li>
-        
-            <li>
+                <i class='fas fa-users'></i>
                 <a class="text-bold mb-3 block" href="/community">Community news</a>
-            </li>
-            
-            <li>
-                <a class="text-bold mb-3 block" href="/planet">Chart</a>
-            </li>
-        
-            <li>
-                <a class="text-bold mb-3 block" href="/celestial">Celestial Being / Charts</a>
             </li>
 
             <li>
-                <a class="text-bold mb-3 block" href="/test">Python view o.O</a>
+                <i class='far fa-star'></i>
+                <a class="text-bold mb-3 block" href="/renewable-energy">Renewable Energy</a>
+            </li>
+
+            <li>
+                <i class='fas fa-share-alt'></i>
+                <a class="text-bold mb-3 block" href="/celestial">Actors / Groups</a>
             </li>
             
             <li>
+                <i class='fas fa-poll'></i>                
+                <a class="text-bold mb-3 block" href="/planet">Chart Degree</a>
+            </li>
+
+            <li>
+                <i class='fab fa-python'></i>
+                <a class="text-bold mb-3 block" href="/test">Python chantier</a>
+            </li>
+            
+            <li>
+                <i class='fab fa-jedi-order'></i>
                 <a class="text-bold mb-3 block" href="/innovators">Innovators Project</a>
             </li>
 
-            @auth
-                        
+            @auth                        
                 <li>
+                    <i class="fas fa-power-off"></i>
                     <a class="text-bold mb-3 block"
                         href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"

@@ -35,6 +35,9 @@ Auth::routes();
 // PYTHON VIEW
 Route::get('/test', [App\Http\Controllers\TestController::class, 'index']);
 
+// COMMUNITY 
+Route::get('/community', [App\Http\Controllers\ArticlesController::class, 'index']);
+
 // CELESTIAL
 Route::get('/celestial', function () { return view('celestial'); });
 
@@ -44,8 +47,7 @@ Route::get('/innovators', function () { return view('innovators'); });
 // Renewable Energy
 Route::get('/renewable-energy', function() { return view('renewable-energy'); });
 
-Route::get('/community', function() { return view('community'); });
-
+//PLANET
 Route::get('/planet', function() { return view('planet'); });
 
 Route::apiResource('api', ApiController::class);

@@ -2,14 +2,23 @@
 
 @section('content')
 <body>
-    <div id="app">
-
-        <example-component></example-component>
-        <br />
-        <line-chart style="background-color: aliceblue"></line-chart>
-        <br />
-        {{-- <grafica-component style="background-color: rgb(248, 248, 248);"></grafica-component> --}}
-        
+    <div class="container">
+        <div class="justify-content-center text-center">
+            <h2>The Actors, Groups, Celestial Being</h2>
+            <ul>
+                <li>Akuo Energy</li>
+                <li>Solar tiles</li>
+                <li>Floating solar panel</li>
+                <li>Éolien</li>
+                <li>Solaire</li>
+                <li>Biomasse</li>
+                <li>Hydro</li>
+                <li>ETM</li>
+                <li>Agrinergie</li>
+                <li>Stockage</li>
+                <li>Aquanergie</li>                      
+            </ul>
+        </div>
     </div>
 </body>
 @endsection
