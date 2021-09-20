@@ -19,7 +19,9 @@
             <p class="text-center word-wrap text-dark">
                 {{-- Content from DB  // <br/> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur sit sequi vero harum perferendis temporibus veritatis quasi, culpa voluptatem nemo, obcaecati consequuntur earum debitis odit ad necessitatibus ab deserunt quidem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae facere modi dolorem, numquam reiciendis pariatur voluptate minima voluptates atque temporibus qui libero quos mollitia impedit fuga nisi velit quidem? --}}
                 {{ $article->body }}
-            </p>
+                
+            </p>                
+            
         </div>
     @endforeach 
 </body>

@@ -8,7 +8,7 @@
             <div class="add" >
                 <div id="example"></div>
                 <div id="ChartLine"></div>
-                <div class="pt-5" id="ChartBar"></div>
+                <div id="ChartBar" class="pt-5"></div>
             </div>
         </div>
     </div>

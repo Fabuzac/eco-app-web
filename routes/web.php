@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ApiController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,23 +13,16 @@ use App\Http\Controllers\Api\ApiController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/{any?}', function () {
-//     return view('/');
-// });
-Route::get('/', function () {
-    return view('/welcome');
-});
 
+Route::get('/', function () {
+    return view('/home');
+});
 
 // Route::get('/home', [App\Http\Controllers\ControllerChartjs::class, 'Chartjs']);
 
 Route::middleware('auth')->group(function () {
-    Route::get('/welcome', [App\Http\Controllers\TestController::class, 'index'])->name('home');
+    Route::get('/home', [App\Http\Controllers\TestController::class, 'index'])->name('home');
 });
-
-Auth::routes();
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // PYTHON VIEW
 Route::get('/test', [App\Http\Controllers\TestController::class, 'index']);
@@ -39,15 +31,16 @@ Route::get('/test', [App\Http\Controllers\TestController::class, 'index']);
 Route::get('/community', [App\Http\Controllers\ArticlesController::class, 'index']);
 
 // CELESTIAL
-Route::get('/celestial', function () { return view('celestial'); });
+Route::get('/celestial', [App\Http\Controllers\CelestialController::class, 'index']);
 
 // INNOVATORS
-Route::get('/innovators', function () { return view('innovators'); });
+Route::get('/innovators', [App\Http\Controllers\InnovatorsController::class, 'index']);
 
-// Renewable Energy
-Route::get('/renewable-energy', function() { return view('renewable-energy'); });
+// RENEWABLE ENERGY
+Route::get('/renewable-energy', [App\Http\Controllers\EnergyController::class, 'index']);
 
-//PLANET
-Route::get('/planet', function() { return view('planet'); });
+// PLANET
+Route::get('/planet', [App\Http\Controllers\PlanetController::class, 'index']);
 
+// API
 Route::apiResource('api', ApiController::class);

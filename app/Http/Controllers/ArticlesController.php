@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -13,7 +12,6 @@ class ArticlesController extends Controller
 
         return view('community', [
             'articles' => $articles,           
-           
         ]);
 
     }
@@ -24,8 +22,7 @@ class ArticlesController extends Controller
 
     public function validateArticle() {
         return request()->validate([
-            'body' => 'required|max:255',            
-            
+            'body' => 'required|max:255',
         ]);
     }
 

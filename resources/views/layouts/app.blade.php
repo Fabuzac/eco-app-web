@@ -51,8 +51,9 @@
                         <h3 class="font-bold text-xl mt-3 mb-2 text-white text-center background-colored p-1 rounded">
                             <i class="far fa-list-alt" style="font-size: 0.8em;"></i> Info list
                         </h3>
-                        @include('_right-info-list')
-                        
+                       @isset($articles)
+                            @include('_right-info-list')
+                        @endisset
                     </div>
                 </div>
             </main>     
