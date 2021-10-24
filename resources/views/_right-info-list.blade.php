@@ -3,8 +3,13 @@
         <ul class="">
             @forelse ($articles as $article )
                 <li class="p-3 mb-3 rounded">
-                    <a href="/"><h3>{{ $article->title }}</h3></a>
-                    <a class="has-text-weight-bold is-size-4 mb-3 block" href="/">{{ $article->summary }}</a>
+                    <a href="/article/{{ $article->id }}">
+                        <h3>{{ $article->title }}</h3>
+                    </a>
+                    
+                    <a class="has-text-weight-bold is-size-4 mb-3 block" href="/article/{{ $article->id }}">
+                        {{ $article->summary }}
+                    </a>
                 </li>
             @empty
                 <li class="p-3 mb-3 rounded">

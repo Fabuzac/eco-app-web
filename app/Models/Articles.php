@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Articles extends Model
 {
@@ -11,6 +12,20 @@ class Articles extends Model
 
     // Table Name
     protected $table = 'articles';
+
+    // public function article() {
+    //     $articles = DB::table('articles')
+    //                 ->orderBy('id', 'desc')
+    //                 ->get();
+    // }
+
+    protected $filliable = [
+        'title',
+        'summary',
+        'body',
+        'created_at',
+        'update_at',
+    ];
 
     public function user() {
 

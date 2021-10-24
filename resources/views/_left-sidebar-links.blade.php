@@ -8,7 +8,7 @@
         
             <li>
                 <i class='fas fa-users'></i>
-                <a class="text-bold mb-3 block" href="/community">Community news</a>
+                <a class="text-bold mb-3 block" href="/articles">Community news</a>
             </li>
 
             <li>

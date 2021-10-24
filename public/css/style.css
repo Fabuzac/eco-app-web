@@ -6,7 +6,8 @@ body {
 }
 
 .sidebar-left {
-    background-color: #243a61;   
+    background-color: #243a61;  
+    /* height: 87vh;  */
 }
 
 .left-menu {

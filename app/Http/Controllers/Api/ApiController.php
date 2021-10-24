@@ -69,63 +69,6 @@ class ApiController extends Controller
         $api->delete();
     }
 
-    //=================================
-    //=================================
-    //=================================
-
-    public function list()
-    {
-        return response()->json(Concert::all());
-    }
-
-    public function add(Request $request)
-    {
-        $item = Concert::create($request->all());
-        return response()->json($item);
-
-        return response()->json(array("status" => "1"));
-    }
-
-    public function done($id) 
-    {
-        $api  = Api::find($id);
-
-        if($api) {
-            $api->completed = 1;
-
-            $api->save();
-
-            return response()->json("success");
-        } else {
-            return response()->json("error");
-        }
-
-        
-        return response()->json(array("status" => "1"));
-        // Ou en en cas échec
-        return response()->json(array("status" => "0"));
-
-    }
-
-    public function remove($id) 
-    {
-        $concert = Concert::find($id);
-        
-        if($concert) {
-            $concert->delete();
-
-            return response()->json(["status" => "success"]);
-
-        } else {            
-            return response()->json(["status" => "error"]);            
-        }
-
-        return response()->json(array("status" => "1"));
-
-        // Ou en en cas échec d'ajout il faudra retourner
-        return response()->json(array("status" => "0"));
-      
-    }    
 }
 
 

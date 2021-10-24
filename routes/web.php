@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ApiController;
 
@@ -14,21 +15,26 @@ use App\Http\Controllers\Api\ApiController;
 |
 */
 
-Route::get('/', function () {
-    return view('/home');
-});
+Route::get('/', [App\Http\Controllers\ArticlesController::class, 'homeAsideArticles']);
+
+// Route::get('/', function () {
+//     return view('/home');
+// });
 
 // Route::get('/home', [App\Http\Controllers\ControllerChartjs::class, 'Chartjs']);
 
 Route::middleware('auth')->group(function () {
-    Route::get('/home', [App\Http\Controllers\TestController::class, 'index'])->name('home');
+    // Route::get('/home', [App\Http\Controllers\WelcomeController::class, 'index'])->name('home');
 });
+
+// Several Articles
+Route::get('/articles', [App\Http\Controllers\ArticlesController::class, 'index']);
+
+// One Article
+Route::get('/article/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'oneArticle']);
 
 // PYTHON VIEW
 Route::get('/test', [App\Http\Controllers\TestController::class, 'index']);
-
-// COMMUNITY 
-Route::get('/community', [App\Http\Controllers\ArticlesController::class, 'index']);
 
 // CELESTIAL
 Route::get('/celestial', [App\Http\Controllers\CelestialController::class, 'index']);
@@ -43,4 +49,6 @@ Route::get('/renewable-energy', [App\Http\Controllers\EnergyController::class, '
 Route::get('/planet', [App\Http\Controllers\PlanetController::class, 'index']);
 
 // API
-Route::apiResource('api', ApiController::class);
+Route::apiResource('api', App\Http\Controllers\Api\ApiController::class);
+
+Auth::routes();
