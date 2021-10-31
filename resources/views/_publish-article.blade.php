@@ -10,10 +10,25 @@
                     <img class="rounded-circle shadow p-1" src="https://i.pravatar.cc/60" alt="Profile picture">
                     <p class="pl-3 text-dark">{{ Auth::user()->name }} says...</p>
                 </div>
+
+                <textarea class="w-100 textarea border-none" 
+                          name="title" 
+                          placeholder="A little title?"
+                          maxlength="100"
+                          required                
+                ></textarea>
+
+                <textarea class="w-100 textarea border-none" 
+                          name="summary" 
+                          placeholder="What topic?"
+                          maxlength="100"
+                          required                
+                ></textarea>
             
                 <textarea class="w-100 textarea border-none" 
                           name="body" 
                           placeholder="What would you like to express?"
+                          maxlength="500"
                           required                
                 ></textarea>
             
@@ -37,3 +52,4 @@
     @include('_articles')
 </div>
 @endsection --}}
+

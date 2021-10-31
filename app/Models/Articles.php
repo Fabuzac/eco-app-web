@@ -19,12 +19,12 @@ class Articles extends Model
     //                 ->get();
     // }
 
-    protected $filliable = [
+    protected $fillable = [
         'title',
         'summary',
         'body',
         'created_at',
-        'update_at',
+        'updated_at',
     ];
 
     public function user() {

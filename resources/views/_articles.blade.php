@@ -17,6 +17,8 @@
                 </a>
             </div>
 
+            <p class="black">{{ $article->created_at }}</p>
+
             <a class="" href="/article/{{ $article->id }}">
                 <h3 class="text-center word-wrap text-dark">                    
                     {{ $article->title }}                    
@@ -28,6 +30,12 @@
                     {{ $article->summary }}                    
                 </p>                
             </a>
+
+            <form action="/articles/{{ $article->id }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
             
         </div>
     @endforeach 

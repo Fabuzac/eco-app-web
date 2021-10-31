@@ -33,6 +33,12 @@ Route::get('/articles', [App\Http\Controllers\ArticlesController::class, 'index'
 // One Article
 Route::get('/article/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'oneArticle']);
 
+// Create Article
+Route::post('/articles', [App\Http\Controllers\ArticlesController::class, 'store']);
+
+// Delete Article
+Route::delete('/articles/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'destroy']);
+
 // PYTHON VIEW
 Route::get('/test', [App\Http\Controllers\TestController::class, 'index']);
 

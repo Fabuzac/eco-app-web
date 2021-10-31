@@ -9,10 +9,11 @@ class ArticlesController extends Controller
     public function index() {
         
         $articles = Articles::latest()->orderBy('id', 'desc')->get();
-
         return view('articles', [
-            'articles' => $articles,                    
+            'articles' => $articles,
+                           
         ]);
+        
     }
 
     public function show(Articles $articles) {
@@ -28,12 +29,12 @@ class ArticlesController extends Controller
     }
 
     public function store() {
-        $articles = Articles::latest()->orderBy('id', 'desc')->get();
+        
+        $article = new Articles(request(['title', 'summary', 'body']));
+        $article->user_id = auth()->id();
+        $article->save();
 
-        return view('/home', [
-            'articles' => $articles,                    
-        ]);
-
+        return redirect('/articles');
     }
 
     public function edit() {
@@ -44,17 +45,23 @@ class ArticlesController extends Controller
 
     }
 
-    public function destroy() {
+    public function destroy(Articles $articles) {
+
+        $articles->delete();
+
+        return redirect('/articles');
+
+        //->with('success', "L'articles a bien ete supprime !");
+
+        //->route('articles')
 
     }
 
-
-    public function validateArticle() {
-        return request()->validate([
-            'body' => 'required|max:255',
-        ]);
-    }
-
+    // public function validateArticle() {
+    //     return request()->validate([
+    //         'body' => 'required|max:255',
+    //     ]);
+    // }
 
     public function homeAsideArticles() {
         $articles = Articles::latest()->orderBy('id', 'desc')->get();
@@ -75,6 +82,5 @@ class ArticlesController extends Controller
             'articles' => $article //aside articles      
         ]);
     }
-
 
 }
