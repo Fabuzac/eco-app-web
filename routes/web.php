@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ApiController;
@@ -27,34 +26,38 @@ Route::middleware('auth')->group(function () {
     // Route::get('/home', [App\Http\Controllers\WelcomeController::class, 'index'])->name('home');
 });
 
+//==== ARTICLES ====//
+
 // Several Articles
 Route::get('/articles', [App\Http\Controllers\ArticlesController::class, 'index']);
-
 // One Article
 Route::get('/article/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'oneArticle']);
-
 // Create Article
 Route::post('/articles', [App\Http\Controllers\ArticlesController::class, 'store']);
-
 // Delete Article
 Route::delete('/articles/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'destroy']);
 
+//==== PROFILES ====//
+
+// My Profile
+Route::get('/profile/{auth:name}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile');
+// One Profile
+Route::get('/profile/{name}', [App\Http\Controllers\ProfilesController::class, 'show']);
+// Several Profiles
+
+//===== VIEWS =====//
+
 // PYTHON VIEW
 Route::get('/test', [App\Http\Controllers\TestController::class, 'index']);
-
 // CELESTIAL
 Route::get('/celestial', [App\Http\Controllers\CelestialController::class, 'index']);
-
 // INNOVATORS
 Route::get('/innovators', [App\Http\Controllers\InnovatorsController::class, 'index']);
-
 // RENEWABLE ENERGY
 Route::get('/renewable-energy', [App\Http\Controllers\EnergyController::class, 'index']);
-
 // PLANET
 Route::get('/planet', [App\Http\Controllers\PlanetController::class, 'index']);
 
 // API
 Route::apiResource('api', App\Http\Controllers\Api\ApiController::class);
-
 Auth::routes();

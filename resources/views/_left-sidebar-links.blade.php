@@ -36,7 +36,12 @@
                 <a class="text-bold mb-3 block" href="/innovators">Innovators Project</a>
             </li>
 
-            @auth                        
+            @auth                 
+                <li>
+                    <i class='fa fa-user'></i>
+                    <a class="text-bold mb-3 block" href="{{ route( 'profile', Auth::user() ) }}">My Profile</a>
+                </li>
+
                 <li>
                     <i class="fas fa-power-off"></i>
                     <a class="text-bold mb-3 block"
@@ -50,6 +55,7 @@
                         @csrf            
                     </form>
                 </li>
+                
             @endauth
         </ul>
     </nav>

@@ -36,7 +36,7 @@
             <main class="mx-auto">
                 <div class="flex">
                     {{-- column left --}}                    
-                    <div class="sidebar-left w-15">
+                    <div class="sidebar-left w-14">
                         @include('_left-sidebar-links')
                     </div>
               

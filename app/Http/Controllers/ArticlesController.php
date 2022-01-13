@@ -3,17 +3,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Articles;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class ArticlesController extends Controller
 {
     public function index() {
-        
-        $articles = Articles::latest()->orderBy('id', 'desc')->get();
+
         return view('articles', [
-            'articles' => $articles,
-                           
-        ]);
-        
+            'articles' => $articles = Articles::latest()->orderBy('id', 'desc')->get(),              
+        ]);        
     }
 
     public function show(Articles $articles) {
@@ -25,7 +24,7 @@ class ArticlesController extends Controller
     }
 
     public function create() {
-
+        //--
     }
 
     public function store() {
@@ -38,11 +37,11 @@ class ArticlesController extends Controller
     }
 
     public function edit() {
-
+        //--
     }
 
     public function update() {
-
+        //--
     }
 
     public function destroy(Articles $articles) {

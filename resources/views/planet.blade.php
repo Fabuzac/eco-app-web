@@ -14,6 +14,6 @@
     </div>
 </div>
 
-  <!-- Liste des franceTemperatures -->
+  <!-- Liste des Temperatures -->
 
 @endsection
