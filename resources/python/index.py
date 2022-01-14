@@ -1,7 +1,3 @@
-randomString = "Fichier Python via une variable"
-
+randomString = "Python file by variable"
 
 print(randomString)
-
-
-print("2 + 2 = 4")

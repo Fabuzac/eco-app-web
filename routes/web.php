@@ -40,9 +40,9 @@ Route::delete('/articles/{articles:id}', [App\Http\Controllers\ArticlesControlle
 //==== PROFILES ====//
 
 // My Profile
-Route::get('/profile/{auth:name}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile');
-// One Profile
-Route::get('/profile/{name}', [App\Http\Controllers\ProfilesController::class, 'show']);
+//Route::get('/myProfile/{auth:name}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('myProfile');
+// Profile Show
+Route::get('/profiles/{user:name}', [App\Http\Controllers\ProfilesController::class, 'show'])->name('profiles.show');
 // Several Profiles
 
 //===== VIEWS =====//

@@ -11,7 +11,7 @@ class ArticlesController extends Controller
     public function index() {
 
         return view('articles', [
-            'articles' => $articles = Articles::latest()->orderBy('id', 'desc')->get(),              
+            'articles' => $articles = Articles::latest()->orderBy('id', 'desc')->get(),  
         ]);        
     }
 

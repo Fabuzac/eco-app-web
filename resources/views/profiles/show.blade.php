@@ -20,12 +20,13 @@
     @auth
         <div class="d-flex justify-content-between items-center">
             <div class="name-container">
-                <h2 class="font-bold is-size-3 mb-0">{{ $user[1]->name }}</h2>
+                
+                <h2 class="font-bold is-size-3 mb-0">{{ $user->name }}</h2>
                 
                 {{-- Il faudrait obtenir: user->name --}}
                 
-                <p class="text-sm text-primary">{{ $user[1]->email }}</p>
-                <p class="text-sm">Profile created {{ $user[1]->created_at }}</p>
+                <p class="text-sm text-primary">{{ $user->email }}</p>
+                <p class="text-sm">Profile created {{ $user->created_at }}</p>
             </div>
 
             {{-- Edit --}}

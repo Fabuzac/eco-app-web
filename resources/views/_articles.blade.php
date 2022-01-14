@@ -10,7 +10,7 @@
                     >
                 </a>
                 {{-- Author Name --}}
-                <a class="" href="profile/{{ $article->user->name }}">
+                <a class="" href="{{ route('profiles.show', $article->user->name) }}">
                     {{-- Vers page profile user --}}
                     <h5 class="font-bold ml-2 text-dark mt-3">{{ $article->user->name }}</h5>                    
                 </a>

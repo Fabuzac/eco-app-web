@@ -39,7 +39,8 @@
             @auth                 
                 <li>
                     <i class='fa fa-user'></i>
-                    <a class="text-bold mb-3 block" href="{{ route( 'profile', Auth::user() ) }}">My Profile</a>
+                    <a class="text-bold mb-3 block" href="{{ route( 'profiles.show', auth()->user() ) }}">My Profile</a>
+                    
                 </li>
 
                 <li>
