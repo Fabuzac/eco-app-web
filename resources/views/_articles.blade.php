@@ -17,7 +17,7 @@
             </div>
             <p class="black">{{ $article->created_at }}</p>
             {{-- Title Article --}}
-            <a class="" href="/article/{{ $article->id }}">
+            <a class="" href="{{ route('articles.show', $article->id) }}">
                 <h3 class="text-center word-wrap text-dark">                    
                     {{ $article->title }}                    
                 </h3>                
@@ -26,14 +26,14 @@
             <img src="images/eco.jpg" alt="Hydrogene vert" class="image-minuature">
 
             {{-- Summary Article --}}
-            <a class="" href="/article/{{ $article->id }}">
+            <a class="" href="{{ route('articles.show', $article->id) }}">
                 <p class="text-center word-wrap text-dark">                    
                     {{ $article->summary }}                    
                 </p>                
             </a>
             {{-- DELETE Button --}}
             @if (auth()->user())
-                <form action="/articles/{{ $article->id }}" method="POST">
+                <form action="{{ route('articles.destroy', $article->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger"><i class="fa fa-times"></i> Delete</button>

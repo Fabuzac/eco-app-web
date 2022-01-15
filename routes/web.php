@@ -29,13 +29,13 @@ Route::middleware('auth')->group(function () {
 //==== ARTICLES ====//
 
 // Several Articles
-Route::get('/articles', [App\Http\Controllers\ArticlesController::class, 'index']);
+Route::get('/articles', [App\Http\Controllers\ArticlesController::class, 'index'])->name('articles.index');
 // One Article
-Route::get('/article/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'oneArticle']);
+Route::get('/article/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'show'])->name('articles.show');
 // Create Article
-Route::post('/articles', [App\Http\Controllers\ArticlesController::class, 'store']);
+Route::post('/articles', [App\Http\Controllers\ArticlesController::class, 'store'])->name('articles.store');
 // Delete Article
-Route::delete('/articles/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'destroy']);
+Route::delete('/articles/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'destroy'])->name('articles.destroy');
 
 //==== PROFILES ====//
 
