@@ -26,7 +26,6 @@
             <img src="../images/green-hydrogen.jpg" alt="hydrogen" class="image-article">
             
             <p class="text-center word-wrap text-dark">
-                {{-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa voluptatibus illo accusamus repudiandae! Vel non reiciendis eligendi! Corrupti temporibus eveniet accusamus nemo impedit suscipit recusandae harum doloribus! Eos, ipsa labore. --}}
                 {{ $article->body }}
             </p>                            
         </div>

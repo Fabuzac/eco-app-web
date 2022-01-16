@@ -30,20 +30,20 @@
 </head>
 <body>
     <div id="app">        
-        @include('_header-nav')
+        @include('components._header-nav')
 
         @yield('header')
             <main class="mx-auto">
                 <div class="flex">
                     {{-- column left --}}                    
                     <div class="sidebar-left w-14">
-                        @include('_left-sidebar-links')
+                        @include('components._left-sidebar-links')
                     </div>
               
                     {{-- column center --}}
                     <div class="flex-1 p-3">
                        @yield('content')
-                       @include('_footer')
+                       @include('components._footer')
                     </div>
             
                     {{-- column right --}}                        
@@ -52,7 +52,7 @@
                             <i class="far fa-list-alt" style="font-size: 0.8em;"></i> Info list
                         </h3>
                         @isset($articles)
-                            @include('_right-info-list')
+                            @include('components._right-info-list')
                         @endisset
                     </div>
                 </div>

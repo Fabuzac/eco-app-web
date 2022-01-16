@@ -20,46 +20,36 @@
     @auth
         <div class="d-flex justify-content-between items-center">
             <div class="name-container">
-                
-                <h2 class="font-bold is-size-3 mb-0">{{ $user->name }}</h2>
-                
-                {{-- Il faudrait obtenir: user->name --}}
-                
+                {{-- NAME --}}
+                <h2 class="font-bold is-size-3 mb-0">{{ $user->name }}</h2>   
+                {{-- EMAIL --}}             
                 <p class="text-sm text-primary">{{ $user->email }}</p>
+                {{-- CREATED_AT --}}
                 <p class="text-sm">Profile created {{ $user->created_at }}</p>
             </div>
 
-            {{-- Edit --}}
+            {{-- EDIT PROFILE --}}
             <div class="is-flex">
                 <a href="" class="button rounded shadow py-2 px-4 text-xs bg-light">Edit Profile</a>
             </div>
         </div> 
     @else
-
-    {{-- Si n'est pas log --}}
+    {{-- IF NOT LOG --}}
         <div class="d-flex justify-content-between items-center">
             <div class="name-container">
-                <h2 class="font-bold is-size-3 mb-0">Name</h2>
-                {{-- Il faudrait obtenir: user->name --}}
-                
-                <p class="text-sm text-primary">Email@email.com</p>
-                <p class="text-sm">Profile created at 00.00</p>
-            </div>
-
-            {{-- Edit --}}
-            <div class="is-flex">
-                <a href="" class="button rounded shadow py-2 px-4 text-xs bg-light">Edit Profile</a>
-            </div>
+                {{-- NAME --}}
+                <h2 class="font-bold is-size-3 mb-0">{{ $user->name }}</h2>   
+                {{-- EMAIL --}}             
+                <p class="text-sm text-primary">{{ $user->email }}</p>
+                {{-- CREATED_AT --}}
+                <p class="text-sm">Profile created {{ $user->created_at }}</p>
+            </div>            
         </div> 
     @endauth   
 </div>
 
 {{-- BIO --}}
 <p class="text-sm pb-4">
-    Mobile Suit Gundam was developed by animator Yoshiyuki Tomino and a 
-    changing group of Sunrise creators with the collective pseudonym of 
-    Hajime Yatate. The series was originally entitled Freedom Fighter Gunboy (or Gunboy) 
-    for the robot's gun, with teen boys the primary target demographic. 
-    Early production had a number of references to freedom: the White Base was originally "Freedom's Fortress"
+    {{ $user->bio }}
 </p>
 @endsection

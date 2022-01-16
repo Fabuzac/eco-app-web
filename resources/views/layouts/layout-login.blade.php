@@ -17,10 +17,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    
-
     {{-- <script src="http://unpkg.com/turbolinks"></script> --}}
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -32,7 +29,7 @@
 <body>
     <div id="app">
         
-        @include('_header-nav')
+        @include('components._header-nav')
 
         @yield('header')
             <main class="mx-auto">
@@ -41,7 +38,7 @@
                     {{-- column center --}}
                     <div class="flex-1 p-3">
                        @yield('content')
-                       @include('_footer')
+                       @include('components._footer')
                     </div>
                 </div>
             </main>     

@@ -16,19 +16,14 @@ class ArticlesController extends Controller
     }
 
     public function show(Articles $articles) {
-        // $articles = Articles::latest()->get();
 
         // For aside articles
         $article = Articles::latest()->orderBy('id', 'desc')->get();   
         
         return view('articles.show', [
             'article' => $articles, // middle page, one article
-            'articles' => $article //aside articles      
+            'articles' => $article //aside articles, several articles     
         ]);
-    }
-
-    public function create() {
-        //--
     }
 
     public function store() {
@@ -53,15 +48,11 @@ class ArticlesController extends Controller
     public function destroy(Articles $articles) {
 
         $articles->delete();
-
         $uri = route('articles.index');
-
         return redirect($uri);
 
         //->with('success', "L'articles a bien ete supprime !");
-
         //->route('articles')
-
     }
 
     // public function validateArticle() {
@@ -77,7 +68,4 @@ class ArticlesController extends Controller
             'articles' => $articles,                    
         ]);
     }
-
- 
-
 }

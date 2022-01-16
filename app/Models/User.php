@@ -24,6 +24,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'bio'
     ];
 
     /**
@@ -44,26 +45,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function profile() {
-        /**
-         * Les requetes sql peuvent etres passees a partir d'ici?
-         * 
-         * Trouver un moyen de renvoyer les donnees d'un seul utilisateur en fonction de son id ou article 
-         */
-        //return DB::table('users')->where('name');
-
-        // $ids = $this->follows()->pluck('id');
-        // $ids->push($this->id);
-
-        //return Articles::whereIn('user_id', $id)->orderByDesc('id')->paginate(30); 
-        
-    } 
-
-    // public function getRouteKeyName()
-    // {
-    //     return 'name';
-    // }
 
     public function article() {
         return $this->hasMany(Articles::class);

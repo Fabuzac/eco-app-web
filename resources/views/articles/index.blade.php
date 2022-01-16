@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('_publish-article')            
+    @include('articles.store')            
                 
-    @include('_articles')
+    @include('components._articles')
 @endsection

@@ -1,6 +1,3 @@
-{{-- @extends('layouts.app')
-
-@section('content') --}}
 <body>
     @if (auth()->user())
         <div class="container card p-4">        
@@ -43,13 +40,3 @@
 </body>
 {{-- ARTICLES COMPONENT --}}
 <h2 class="text-center m-3 text-decoration-underline">Last Community Article</h2>
-
-{{-- <div class="mt-4">
-    @include('_articles')
-</div>
-
-<div class="mt-2 mb-2">
-    @include('_articles')
-</div>
-@endsection --}}
-
