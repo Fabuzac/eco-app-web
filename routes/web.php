@@ -37,13 +37,16 @@ Route::post('/articles', [App\Http\Controllers\ArticlesController::class, 'store
 // Delete Article
 Route::delete('/articles/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'destroy'])->name('articles.destroy');
 
+// Edit Article
+Route::get('/articles/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'edit'])->name('articles.edit');
+
 //==== PROFILES ====//
 
 // My Profile
 //Route::get('/myProfile/{auth:name}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('myProfile');
+
 // Profile Show
 Route::get('/profiles/{user:name}', [App\Http\Controllers\ProfilesController::class, 'show'])->name('profiles.show');
-// Several Profiles
 
 //===== VIEWS =====//
 

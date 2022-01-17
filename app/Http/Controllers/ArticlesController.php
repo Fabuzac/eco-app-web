@@ -37,8 +37,14 @@ class ArticlesController extends Controller
         return redirect($uri);
     }
 
-    public function edit() {
-        //--
+
+    public function edit(User $user, Articles $articles) {
+
+        return view('articles.edit', [
+            'article' => $articles,
+            'articles' => $article = Articles::latest()->orderBy('id', 'desc')->get(),  
+            'user' => $user,
+        ]);
     }
 
     public function update() {

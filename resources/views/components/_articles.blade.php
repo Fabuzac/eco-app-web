@@ -43,7 +43,7 @@
             
             {{-- EDIT Button --}}
             @if (auth()->user())
-                <form action="" method="POST">
+                <form action="{{ route('articles.edit', $article->id) }}" method="GET">
                     @csrf
                     @method('EDIT')
                     <button type="submit" class="btn btn-success m-1"><i class="fa fa-pen"></i> EDIT</button>

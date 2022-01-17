@@ -3,7 +3,7 @@
         <ul class="">
             @forelse ($articles as $article )
                 <li class="p-3 mb-3 rounded">
-                    <a href="/article/{{ $article->id }}">
+                    <a href="{{ route('articles.show', $article->id) }}">
                         <h3>{{ $article->title }}</h3>
                     </a>
                     
@@ -20,5 +20,7 @@
         </ul>                    
     </nav>    
 </main>
+
+
 
 
