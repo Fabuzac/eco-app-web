@@ -49,6 +49,11 @@ class User extends Authenticatable
     public function article() {
         return $this->hasMany(Articles::class);
     }
+
+    public function timeline() {
+        $id = auth()->user('id');
+        return Articles::whereIn('user_id', $id)->orderByDesc('id')->paginate(30); 
+    }
     
 }
 

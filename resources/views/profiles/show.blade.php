@@ -52,4 +52,10 @@
 <p class="text-sm pb-4">
     {{ $user->bio }}
 </p>
+
+@include('components._articles', [
+    'articles' => $articles
+])
+
+
 @endsection

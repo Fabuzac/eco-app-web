@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use DateTimeInterface;
 use App\Models\Articles;
+use Illuminate\Support\Facades\Auth;
 
 
 class ProfilesController extends Controller
@@ -25,7 +26,8 @@ class ProfilesController extends Controller
 
         return view('profiles.show', [
             'user' => $user,
-            'articles' => $articles, 
+            'articles' => $articles,
+            
         ]);        
     }
         
