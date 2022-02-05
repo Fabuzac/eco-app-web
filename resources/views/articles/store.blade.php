@@ -1,7 +1,7 @@
 <body>
     @if (auth()->user())
         <div class="container card p-4">        
-            <form method="POST" action="{{ route('articles.index') }}">
+            <form method="POST" action="{{ route('articles') }}">
                 @csrf            
                 <div class="d-flex pb-3">
                     <img class="rounded-circle shadow p-1" src="https://i.pravatar.cc/60" alt="Profile picture">

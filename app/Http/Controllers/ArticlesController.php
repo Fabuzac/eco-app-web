@@ -10,7 +10,7 @@ class ArticlesController extends Controller
 {
     public function index() {
 
-        return view('articles.index', [
+        return view('articles', [
             'articles' => $articles = Articles::latest()->orderBy('id', 'desc')->get(),  
         ]);        
     }
@@ -20,7 +20,7 @@ class ArticlesController extends Controller
         // For aside articles
         $article = Articles::latest()->orderBy('id', 'desc')->get();   
         
-        return view('articles.show', [
+        return view('article', [
             'article' => $articles, // middle page, one article
             'articles' => $article //aside articles, several articles     
         ]);
@@ -54,7 +54,7 @@ class ArticlesController extends Controller
     public function destroy(Articles $articles) {
 
         $articles->delete();
-        $uri = route('articles.index');
+        $uri = route('articles');
         return redirect($uri);
 
         //->with('success', "L'articles a bien ete supprime !");

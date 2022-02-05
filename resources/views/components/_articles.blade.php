@@ -17,8 +17,9 @@
             </div>
 
             <p class="black">{{ $article->created_at }}</p>
+            {{-- date('d-M-Y', strtotime($article->created_at)) --}}
             {{-- Title Article --}}
-            <a href="{{ route('articles.show', $article->id) }}">
+            <a href="{{ route('article', $article->id) }}">
                 <h3 class="text-center word-wrap text-dark">                    
                     {{ $article->title }}                    
                 </h3>                
@@ -26,7 +27,7 @@
             <img src="images/eco.jpg" alt="Hydrogene vert" class="image-minuature">
 
             {{-- Summary Article --}}
-            <a href="{{ route('articles.show', $article->id) }}">
+            <a href="{{ route('article', $article->id) }}">
                 <p class="text-center word-wrap text-dark">                    
                     {{ $article->summary }}                    
                 </p>                

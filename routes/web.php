@@ -22,12 +22,13 @@ Route::middleware('auth')->group(function () {
     // Route::get('/home', [App\Http\Controllers\WelcomeController::class, 'index'])->name('home');
 });
 
-//==== ARTICLES ====//
+//==== ARTICLES MANAGEMENT ====//
 
-// Several Articles
-Route::get('/articles', [App\Http\Controllers\ArticlesController::class, 'index'])->name('articles.index');
-// One Article
-Route::get('/article/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'show'])->name('articles.show');
+// Articles
+Route::get('/articles', [App\Http\Controllers\ArticlesController::class, 'index'])->name('articles');
+// Article
+Route::get('/article/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'show'])->name('article');
+
 // Create Article
 Route::post('/articles', [App\Http\Controllers\ArticlesController::class, 'store'])->name('articles.store');
 // Delete Article
