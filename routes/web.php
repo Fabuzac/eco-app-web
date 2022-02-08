@@ -14,47 +14,28 @@ use App\Http\Controllers\Api\ApiController;
 |
 */
 
-Route::get('/', [App\Http\Controllers\ArticlesController::class, 'homeAsideArticles']);
+Route::get('/', [App\Http\Controllers\MainController::class, 'home'])->name('home');
 
-// Route::get('/home', [App\Http\Controllers\ControllerChartjs::class, 'Chartjs']);
+// GUEST ARTICLE
+Route::get('/articles', [App\Http\Controllers\MainController::class, 'index'])->name('articles');
+Route::get('/article/{articles:id}', [App\Http\Controllers\MainController::class, 'show'])->name('article');
 
-Route::middleware('auth')->group(function () {
-    // Route::get('/home', [App\Http\Controllers\WelcomeController::class, 'index'])->name('home');
+// OTHER PAGES
+Route::get('/test', [App\Http\Controllers\OtherPagesController::class, 'indexTest'])->name('test');
+Route::get('/celestial', [App\Http\Controllers\OtherPagesController::class, 'indexCelestial'])->name('celestial');
+Route::get('/innovators', [App\Http\Controllers\OtherPagesController::class, 'indexInnovators'])->name('innovators');
+Route::get('/energy', [App\Http\Controllers\OtherPagesController::class, 'indexEnergy'])->name('energy');
+Route::get('/planet', [App\Http\Controllers\OtherPagesController::class, 'indexPlanet'])->name('planet');
+
+// USER
+Route::middleware('auth')->group(function () {    
+
+    Route::post('/articles', [App\Http\Controllers\ArticlesController::class, 'create'])->name('articles.create');
+    Route::post('/articles/store', [App\Http\Controllers\ArticlesController::class, 'store'])->name('articles.store');
+    Route::delete('/articles/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'destroy'])->name('articles.destroy');
+    Route::get('/articles/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'edit'])->name('articles.edit');
+    Route::get('/profiles/{user:name}', [App\Http\Controllers\ProfilesController::class, 'show'])->name('profiles.show');
 });
-
-//==== ARTICLES MANAGEMENT ====//
-
-// Articles
-Route::get('/articles', [App\Http\Controllers\ArticlesController::class, 'index'])->name('articles');
-// Article
-Route::get('/article/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'show'])->name('article');
-
-// Create Article
-Route::post('/articles', [App\Http\Controllers\ArticlesController::class, 'store'])->name('articles.store');
-// Delete Article
-Route::delete('/articles/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'destroy'])->name('articles.destroy');
-// Edit Article
-Route::get('/articles/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'edit'])->name('articles.edit');
-
-//==== PROFILES ====//
-
-// My Profile
-
-// Profile Show
-Route::get('/profiles/{user:name}', [App\Http\Controllers\ProfilesController::class, 'show'])->name('profiles.show');
-
-//===== VIEWS =====//
-
-// PYTHON VIEW
-Route::get('/test', [App\Http\Controllers\TestController::class, 'index']);
-// CELESTIAL
-Route::get('/celestial', [App\Http\Controllers\CelestialController::class, 'index']);
-// INNOVATORS
-Route::get('/innovators', [App\Http\Controllers\InnovatorsController::class, 'index']);
-// RENEWABLE ENERGY
-Route::get('/renewable-energy', [App\Http\Controllers\EnergyController::class, 'index']);
-// PLANET
-Route::get('/planet', [App\Http\Controllers\PlanetController::class, 'index']);
 
 // API
 Route::apiResource('api', App\Http\Controllers\Api\ApiController::class);

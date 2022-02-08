@@ -13,7 +13,7 @@
 
             <li>
                 <i class='far fa-star'></i>
-                <a class="text-bold mb-3 block" href="/renewable-energy">Renewable Energy</a>
+                <a class="text-bold mb-3 block" href="/energy">Renewable Energy</a>
             </li>
 
             <li>

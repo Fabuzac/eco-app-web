@@ -8,37 +8,29 @@ use App\Models\User;
 
 class ArticlesController extends Controller
 {
-    public function index() {
 
-        return view('articles', [
-            'articles' => $articles = Articles::latest()->orderBy('id', 'desc')->get(),  
-        ]);        
-    }
-
-    public function show(Articles $articles) {
-
-        // For aside articles
-        $article = Articles::latest()->orderBy('id', 'desc')->get();   
-        
-        return view('article', [
+    public function create(Articles $articles)
+    {
+        return view('articles.create', [
             'article' => $articles, // middle page, one article
-            'articles' => $article //aside articles, several articles     
+            'articles' => $article = Articles::latest()->orderBy('id', 'desc')->get() //aside articles, several articles     
         ]);
     }
 
-    public function store() {
-        
+    public function store() 
+    {        
+        // Prevoir validation avec $request
+
         $article = new Articles(request(['title', 'summary', 'body']));
         $article->user_id = auth()->id();
         $article->save();
 
-        $uri = route('articles.store');
-
-        return redirect($uri);
+        return redirect()->route('articles');
     }
 
 
-    public function edit(User $user, Articles $articles) {
+    public function edit(User $user, Articles $articles) 
+    {
 
         return view('articles.edit', [
             'article' => $articles,
@@ -47,31 +39,18 @@ class ArticlesController extends Controller
         ]);
     }
 
-    public function update() {
+    public function update() 
+    {
         //--
     }
 
-    public function destroy(Articles $articles) {
+    public function destroy(Articles $articles) 
+    {
 
         $articles->delete();
         $uri = route('articles');
         return redirect($uri);
 
-        //->with('success', "L'articles a bien ete supprime !");
-        //->route('articles')
-    }
-
-    // public function validateArticle() {
-    //     return request()->validate([
-    //         'body' => 'required|max:255',
-    //     ]);
-    // }
-
-    public function homeAsideArticles() {
-        $articles = Articles::latest()->orderBy('id', 'desc')->get();
-
-        return view('/home', [
-            'articles' => $articles,                    
-        ]);
+        
     }
 }

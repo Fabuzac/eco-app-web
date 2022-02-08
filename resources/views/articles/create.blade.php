@@ -1,7 +1,7 @@
-<body>
+<section>
     @if (auth()->user())
         <div class="container card p-4">        
-            <form method="POST" action="{{ route('articles') }}">
+            <form method="POST" action="{{ route('articles.store') }}">
                 @csrf            
                 <div class="d-flex pb-3">
                     <img class="rounded-circle shadow p-1" src="https://i.pravatar.cc/60" alt="Profile picture">
@@ -37,6 +37,6 @@
             @enderror
         </div>
     @endif
-</body>
+</section>
 {{-- ARTICLES COMPONENT --}}
 <h2 class="text-center m-3 text-decoration-underline">Last Community Article</h2>
