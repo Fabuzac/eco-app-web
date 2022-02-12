@@ -15,6 +15,11 @@ class CreateApiDegreeFrancesTable extends Migration
     {
         Schema::create('api_degree_frances', function (Blueprint $table) {
             $table->id();
+            $table->int('years');
+            $table->string('months');
+            $table->float('max_degree');
+            $table->float('min_degree');
+            $table->float('average_degree');
             $table->timestamps();
         });
     }

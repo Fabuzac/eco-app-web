@@ -25,6 +25,12 @@ class ArticlesController extends Controller
         $article->user_id = auth()->id();
         $article->save();
 
+        // Article::create([
+        //     'title' => $request->input('title'),
+        //     'subtitle' => $request->input('subtitle'),
+        //     'content' => $request->input('content'),
+        // ]);
+
         return redirect()->route('articles');
     }
 
@@ -41,7 +47,13 @@ class ArticlesController extends Controller
 
     public function update() 
     {
-        //--
+        /**
+         * 
+         * $article->title = $request->input('title');
+         * $article->subtitle = $request->input('subtitle');
+         * $article->content = $request->input('content');
+         * $article->save();
+        */
     }
 
     public function destroy(Articles $articles) 
