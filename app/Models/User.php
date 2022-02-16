@@ -46,11 +46,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function article() {
+    public function article() 
+    {
         return $this->hasMany(Articles::class);
     }
 
-    public function timeline() {
+    public function timeline() 
+    {
         $id = auth()->user('id');
         return Articles::whereIn('user_id', $id)->orderByDesc('id')->paginate(30); 
     }
