@@ -28,8 +28,7 @@ Route::get('/energy', [App\Http\Controllers\OtherPagesController::class, 'indexE
 Route::get('/planet', [App\Http\Controllers\OtherPagesController::class, 'indexPlanet'])->name('planet');
 
 // USER
-Route::middleware('auth')->group(function () {    
-
+Route::middleware('auth')->group(function () {
     Route::post('/articles', [App\Http\Controllers\ArticlesController::class, 'create'])->name('articles.create');
     Route::post('/articles/store', [App\Http\Controllers\ArticlesController::class, 'store'])->name('articles.store');
     Route::delete('/articles/{articles:id}', [App\Http\Controllers\ArticlesController::class, 'destroy'])->name('articles.destroy');
