@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
+{{-- PYTHON TEST VIEW --}}
 <body>    
     <div class="container text-center">
         <h2>Python Project</h2>

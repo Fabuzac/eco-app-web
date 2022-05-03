@@ -1,11 +1,14 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-
     <section class="px-2 ">
         <header class="container mx-auto background-wind">                
-            <a href="/"><img width="80" src="/images/rose.png" alt="logo" class="logo"></a>
+            <a href="/">
+                <img width="80" 
+                     src="/images/rose.png" 
+                     alt="logo" 
+                     class="logo">
+            </a>
         </header>
     </section>
-
     <div class="container">
         <a class="navbar-brand font-2" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -32,19 +35,22 @@
                 @guest
                     @if (Route::has('login'))
                         <li class="nav-item">                            
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" 
+                               href="{{ route('login') }}">{{ __('Login') }}
+                            </a>
                         </li>
                     @endif
 
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" 
+                               href="{{ route('register') }}">{{ __('Register') }}
+                            </a>
                         </li>
                     @endif
                 @else
                 <i class="mt-2 fas fa-user-circle" style='color:rgb(0, 0, 0)'></i>
-                    <li class="nav-item dropdown">
-                        
+                    <li class="nav-item dropdown">                        
                         <a id="navbarDropdown" 
                            class="nav-link dropdown-toggle" 
                            href="#" 

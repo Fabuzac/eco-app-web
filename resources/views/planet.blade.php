@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
+{{-- REACT VIEW --}}
 <div>
     <div class="card">
         <div class="card-body">
@@ -13,7 +13,4 @@
         </div>
     </div>
 </div>
-
-  <!-- Liste des Temperatures -->
-
 @endsection

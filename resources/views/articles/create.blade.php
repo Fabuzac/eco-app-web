@@ -4,33 +4,36 @@
             <form method="POST" action="{{ route('articles.store') }}">
                 @csrf            
                 <div class="d-flex pb-3">
-                    <img class="rounded-circle shadow p-1" src="https://i.pravatar.cc/60" alt="Profile picture">
+                    <img class="rounded-circle shadow p-1" 
+                         src="https://i.pravatar.cc/60" 
+                         alt="Profile picture">
                     <p class="pl-3 text-dark">{{ Auth::user()->name }} says...</p>
                 </div>
-
+                {{-- TITLE --}}
                 <textarea class="w-100 textarea border-none" 
                           name="title" 
                           placeholder="A little title?"
                           maxlength="100"
-                          required                
-                ></textarea>
-
+                          required >
+                </textarea>
+                {{-- SUMMARY --}}
                 <textarea class="w-100 textarea border-none" 
                           name="summary" 
                           placeholder="What topic?"
                           maxlength="100"
-                          required                
-                ></textarea>
-            
+                          required >
+                </textarea>           
+                {{-- BODY  --}}
                 <textarea class="w-100 textarea border-none" 
                           name="body" 
                           placeholder="What would you like to express?"
                           maxlength="500"
-                          required                
-                ></textarea>
-            
+                          required >
+                </textarea>            
                 <hr class="my-4" />
-                <button type="submit" class="width-30 btn-dark shadow py-2 px-2 text-white btn-article rounded">Earthy !</button>            
+                <button type="submit" 
+                        class="width-30 btn-dark shadow py-2 px-2 text-white btn-article rounded">Earthy !
+                </button>            
             </form>        
             @error('body')
                 <p class="is-danger text-sm">{{ $message }}</p>

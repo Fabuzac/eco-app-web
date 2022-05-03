@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- Changer en div --}}
+{{-- HAVE TO CHANGE IN DIV --}}
+{{-- JUST FOR HAVE DATA --}}
 <body>    
     <div class="container">
         <div class="justify-content-center text-center">

@@ -1,8 +1,8 @@
+{{-- SPECIAL PAGE --}}
 <html style="background-color: #000">
     <body>   
         <style>
             .input {
-
                 margin-top: 20%;
                 margin-left: 35%;
             }
@@ -19,7 +19,6 @@
                 top:5%;
                 left: 40%;
             }
-
         </style>
 
         <img src="images/INVT.png" alt="" width="10%" class="invt">
@@ -29,10 +28,8 @@
             class="width-100 textarea border-none" 
             name="body" 
             placeholder="Who are you?"
-            required
-                
-        ></textarea>
-          
+            required            
+        ></textarea>          
         </form>
     </body>
 </html>

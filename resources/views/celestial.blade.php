@@ -1,7 +1,7 @@
 @extends('layouts.app')
-
 @section('content')
 <body>
+    {{-- JUST FOR HAVE DATA --}}
     <div class="container">
         <div class="justify-content-center text-center">
             <h2>The Actors, Groups, Celestial Being</h2>
