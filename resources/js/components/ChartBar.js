@@ -13,7 +13,7 @@ const ChartBar = () => {
     let minDegree = [];
     let maxDegree = [];
     
-    axios.get("/api")
+    axios.get("/api/data-fr")
       .then(response => {
         console.log("Response status " + response.status);
         
@@ -69,7 +69,6 @@ const ChartBar = () => {
       .catch(error => {
         console.error(error);
       });
-
   };
 
   useEffect(() => {
@@ -116,4 +115,3 @@ export default ChartBar;
 if (document.getElementById('ChartBar')) {
     ReactDOM.render(<ChartBar />, document.getElementById('ChartBar'));
   }
- 

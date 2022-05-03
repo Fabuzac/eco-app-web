@@ -9,6 +9,9 @@ class Api extends Model
 {
     use HasFactory;
 
+    // Table Name
+    protected $table = 'api_degree_france';
+    
     //protected $guarded = [];
 
     protected $fillable = [

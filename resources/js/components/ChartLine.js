@@ -12,11 +12,11 @@ const ChartLine = () => {
     let averageDegree = [];
     let minDegree = [];
     let maxDegree = [];
-    
-    axios.get("/api")
+
+    axios.get("/api/data-fr")
       .then(response => {
         console.log("Response status " + response.status);
-        //console.log(response.config);
+        console.log(response.config);        
         
         for (const dataObj of response.data) {
           months.push(dataObj.months);
@@ -68,9 +68,8 @@ const ChartLine = () => {
       .catch(error => {
         console.error(error);
       });
-
     
-    //console.log(months, years, averageDegree, minDegree, maxDegree);
+    console.log(months, years, averageDegree, minDegree, maxDegree);
   };
 
   useEffect(() => {
@@ -120,4 +119,3 @@ export default ChartLine;
 if (document.getElementById('ChartLine')) {
     ReactDOM.render(<ChartLine />, document.getElementById('ChartLine'));
   }
- 

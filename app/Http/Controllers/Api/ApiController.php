@@ -7,8 +7,6 @@ use Illuminate\Http\Request;
 use App\Models\Api;
 use App\Models\ApiDegreeFrance;
 
-use Illuminate\Support\Facades\DB;
-
 class ApiController extends Controller
 {
     /**
@@ -19,9 +17,6 @@ class ApiController extends Controller
     public function index()
     {
         return ApiDegreeFrance::all();
-
-        // $api = DB::select('select * from apis');
-        // return view('planet.index', ['api' => $api]);
     }
 
     /**
