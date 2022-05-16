@@ -5,7 +5,7 @@
         <div class="justify-content-center text-center">
             <h1 class="text-light">Earth-Health</h1>
             <h2>Dashboard </h2>       
-            <p>                
+            <div>                
                 <iframe width="100%" 
                         height="600px" 
                         frameborder="0" 
@@ -13,7 +13,11 @@
                         allowfullscreen>
                 </iframe>
                 <p><a href="https://framacarte.org/fr/map/new/">Voir en plein écran</a></p>
-            </p>            
+            </div>
+            <div class="card">
+                <h3 class="card-header">Title</h3>
+                <p></p>
+            </div>            
         </div>
     </div>
 </body>
