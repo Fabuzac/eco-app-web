@@ -9,6 +9,7 @@
                 <div id="ChartLine"></div>
                 <div class="mt-3" id="example"></div>
                 <div id="ChartBar" class="pt-5"></div>
+                <div id="goo" class="pt-5"></div>
             </div>
         </div>
     </div>
