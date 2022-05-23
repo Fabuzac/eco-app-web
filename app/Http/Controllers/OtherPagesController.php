@@ -41,4 +41,9 @@ class OtherPagesController extends Controller
             'articles' => $articles = Articles::latest()->get(),           
         ]);
     }
+
+    public function map()
+    {
+        return view('map');
+    }
 }

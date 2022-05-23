@@ -14,6 +14,18 @@
                 <a class="text-bold mb-3 block" href="/energy">Renewable Energy</a>
             </li>
             <li>
+                <i class='fas fa-map'></i>
+                <a class="text-bold mb-3 block" href="/map">Map</a>
+            </li> 
+            <li>
+                <i class='fas fa-key'></i>
+                <a class="text-bold mb-3 block" href="/map">Model</a>
+            </li>
+            <li>
+                <i class='fas fa-circle'></i>
+                <a class="text-bold mb-3 block" href="/map">Les Neufs</a>
+            </li> 
+            <li>
                 <i class='fas fa-share-alt'></i>
                 <a class="text-bold mb-3 block" href="/celestial">Actors / Groups</a>
             </li>            
@@ -29,6 +41,10 @@
                 <i class='fab fa-jedi-order'></i>
                 <a class="text-bold mb-3 block" href="/innovators">Innovators Project</a>
             </li>
+            <li>
+                <i class='fas fa-wrench'></i>
+                <a class="text-bold mb-3 block" href="/map">Settings</a>
+            </li> 
             @auth                 
                 <li>
                     <i class='fa fa-user'></i>

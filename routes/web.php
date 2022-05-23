@@ -29,6 +29,7 @@ Route::get('/celestial', [OtherPagesController::class, 'indexCelestial'])->name(
 Route::get('/innovators', [OtherPagesController::class, 'indexInnovators'])->name('innovators');
 Route::get('/energy', [OtherPagesController::class, 'indexEnergy'])->name('energy');
 Route::get('/planet', [OtherPagesController::class, 'indexPlanet'])->name('planet');
+Route::get('/map', [OtherPagesController::class, 'map'])->name('map');
 
 // USER
 Route::middleware('auth')->group(function () {
