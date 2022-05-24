@@ -15,17 +15,20 @@
     <link rel="mask-icon" href="/favicon/favicon.png" color="#ff2d20">
     <link rel="shortcut icon" href="favicon/favicon.png">
     <meta name="theme-color" content="#ffffff">
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('lib/fontawesome.js') }}" defer></script>
-    {{-- <script src="http://unpkg.com/turbolinks"></script> --}}
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('leaflet/leaflet.css') }}" />
+    <!-- Scripts -->
+    <script src="{{ asset('js/map.js') }}" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('lib/fontawesome.js') }}" defer></script>
+    <script src="{{ asset('leaflet/leaflet.js') }}"></script>   
+    {{-- <script src="http://unpkg.com/turbolinks"></script> --}}
     @yield('head')
 </head>
 <body>
@@ -33,30 +36,30 @@
         @include('components._header-nav')
 
         @yield('header')
-            <main class="mx-auto">
-                <div class="flex">
-                    {{-- column left --}}                    
-                    <div class="sidebar-left w-14">
-                        @include('components._left-sidebar-links')
-                    </div>
-              
-                    {{-- column center --}}
-                    <div class="flex-1 p-3">
-                       @yield('content')
-                       @include('components._footer')
-                    </div>
-            
-                    {{-- column right --}}                        
-                    <div class="pr-3 w-15">
-                        <h3 class="font-bold text-xl mt-3 mb-2 text-white text-center background-colored p-1 rounded">
-                            <i class="far fa-list-alt" style="font-size: 0.8em;"></i> Info list
-                        </h3>
-                        @isset($articles)
-                            @include('components._right-info-list')
-                        @endisset
-                    </div>
+        <main class="mx-auto">
+            <div class="flex">
+                {{-- column left --}}                    
+                <div class="sidebar-left w-14">
+                    @include('components._left-sidebar-links')
                 </div>
-            </main>     
-    </div>    
+            
+                {{-- column center --}}
+                <div class="flex-1 p-3">
+                    @yield('content')
+                    @include('components._footer')
+                </div>
+        
+                {{-- column right --}}                        
+                <div class="pr-3 w-15">
+                    <h3 class="font-bold text-xl mt-3 mb-2 text-white text-center background-colored p-1 rounded">
+                        <i class="far fa-list-alt" style="font-size: 0.8em;"></i> Info list
+                    </h3>
+                    @isset($articles)
+                        @include('components._right-info-list')
+                    @endisset
+                </div>
+            </div>
+        </main>     
+    </div> 
 </body>
 </html>

@@ -144,3 +144,8 @@ iframe {
     text-align: center;
 } */
 
+#map { 
+    height: 500px;
+    width: 970px;
+    border-radius: 1rem;
+}
