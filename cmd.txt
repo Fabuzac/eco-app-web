@@ -1,0 +1,86 @@
+Voir toutes les routes de son projet<!--cellule-->
+php artisan route:list
+
+<!--ligne-->
+Mettre en place front-end rapidement avec espace de Log: Laravel vue<!--cellule-->
+composer create-project --prefer-dist laravel/laravel projectname
+cd project name
+composer require laravel/ui --dev
+php artisan ui vue --auth
+npm update vue-loader
+npm install && run dev
+PHP artisan key:generate
+
+<!--ligne-->
+Lancer le projet dans le navigateur<!--cellule-->
+php artisan serve
+
+<!--ligne-->
+Version Laravel<!--cellule-->
+php artisan --version
+
+<!--ligne-->
+Migre une base de données ou créer<!--cellule-->
+php artisan migrate
+
+<!--ligne-->
+Génere une table aléatoire<!--cellule-->
+php artisan tinker
+ex: $tag = APP\Tag::first()
+
+<!--ligne-->
+Générer un utilisateur aléatoire<!--cellule-->
+php artisan tinker
+App\Models\User::factory()->create() /* Pour Laravel8 */
+App\Models\User::factory()->count(5)->create();
+
+<!--ligne-->
+Générer un Article aléatoire<!--cellule-->
+php artisan tinker
+App\Models\Article::factory()->count(5)->create();
+
+<!--ligne-->
+CSRF, cross-site request forgery<!--cellule-->
+Attaque indirect
+
+<!--ligne-->
+Laravel Service container<!--cellule-->
+...
+
+<!--ligne-->
+Service provider<!--cellule-->
+...
+
+<!--ligne-->
+Email Markdown<!--cellule-->
+ex de class: return $this->markdown('emails.contact-me')
+Necessite templating adequate
+
+<!--ligne-->
+Make factory migration controller -fmc<!--cellule-->
+php artisan make:model Exemple -fmc
+
+<!--ligne-->
+Ajouter fichier helper<!--cellule-->
+add to composer.json -> "files": ["app/helpers.php"]
+Puis dans le terminal: composer dump-autoload
+
+Gestion des droits
+php artisan make:policy UserPolicy
+
+Bonne pratique gestion d'image dans l'app
+modifier .env avec public puis php artisan storage:link
+
+Authorization & Ability
+On peut utiliser '@'can (dans fichier.blade) comme une condition
+AuthServiceProvider
+
+_______________________
+// Log tous les commits
+
+-> git log --oneline
+
+-> git checkout 70b1621f .
+___________________________
+
+composer create-project --prefer-dist laravel/laravel api-laravel "8.*"
